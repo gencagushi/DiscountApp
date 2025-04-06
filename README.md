@@ -123,7 +123,7 @@ Codes are stored in a local `discounts.db` text file:
 
 ---
 
-## 🧪 Load Testing (Optional)
+## 🧪 Load Testing
 
 Use the `LoadTest` project to simulate multiple clients generating/using codes concurrently.
 
@@ -133,7 +133,7 @@ dotnet run --project LoadTest
 
 ---
 
-## 🌐 React Client (Optional)
+## 🌐 React Client 
 
 The `DiscountClient` is a simple WebSocket UI in React for testing.
 
