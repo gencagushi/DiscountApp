@@ -83,6 +83,12 @@ public class WebSocketServer
         if (json.Contains("Count"))
         {
             var req = JsonSerializer.Deserialize<GenerateRequest>(json);
+
+            if (req == null || req.Count == 0 || req.Length == 0)
+            {
+                return JsonSerializer.Serialize(new { Error = "Count and Length must be greater than 0" });
+            }
+
             var codes = _service.GenerateCodes(req.Count, req.Length);
             var res = new GenerateResponse
             {
@@ -96,6 +102,10 @@ public class WebSocketServer
         if (json.Contains("Code"))
         {
             var req = JsonSerializer.Deserialize<UseCodeRequest>(json);
+            if (req == null)
+            {
+                return JsonSerializer.Serialize(new { Error = "Invalid request" });
+            }
             var res = new UseCodeResponse { Result = _service.UseCode(req.Code) };
             return JsonSerializer.Serialize(res);
         }
@@ -105,11 +115,11 @@ public class WebSocketServer
             var all = _service.GetAllCodes();
             var response = new AllCodesResponse
             {
-                AllCodes = all.Select(kvp => new CodeEntry
+                AllCodes = [.. all.Select(kvp => new CodeEntry
                 {
                     Code = kvp.Key,
                     Used = kvp.Value
-                }).ToList()
+                })]
             };
             return JsonSerializer.Serialize(response);
         }
