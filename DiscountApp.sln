@@ -1,0 +1,35 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35913.81
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiscountServer", "DiscountServer\DiscountServer.csproj", "{F96B5046-CC5D-4E61-AA88-3A51BA50F07F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoadTest", "LoadTest\LoadTest.csproj", "{3A8EF63D-0AEC-404F-AF53-9748401B13A3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ReactClient", "ReactClient", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+	ProjectSection(SolutionItems) = preProject
+		DiscountClient\package.json = DiscountClient\package.json
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F96B5046-CC5D-4E61-AA88-3A51BA50F07F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F96B5046-CC5D-4E61-AA88-3A51BA50F07F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F96B5046-CC5D-4E61-AA88-3A51BA50F07F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F96B5046-CC5D-4E61-AA88-3A51BA50F07F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A8EF63D-0AEC-404F-AF53-9748401B13A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A8EF63D-0AEC-404F-AF53-9748401B13A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A8EF63D-0AEC-404F-AF53-9748401B13A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A8EF63D-0AEC-404F-AF53-9748401B13A3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {95F1040E-2532-4865-AB0B-1FAD574876CF}
+	EndGlobalSection
+EndGlobal
